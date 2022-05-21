@@ -1,9 +1,11 @@
 import Head from 'next/head'
-import commerce from '../lib/commerce.js'
+//import commerce from '../lib/commerce.js'
 import React from 'react';
-import ProductList from '../components/ProductList';
+//import ProductList from '../components/ProductList';
+import Link from 'next/link';
+import Image from 'next/image';
 
-export async function getStaticProps() {
+/* export async function getStaticProps() {
   const merchant = await commerce.merchants.about();
   const { data: products } = await commerce.products.list();
   return {
@@ -12,22 +14,15 @@ export async function getStaticProps() {
       merchant,
     },
   };
-}
+} */
+
 export default function Home({merchant, products}) {
   //  const { products } = props; 
     return (
-        <>
-        <React.Fragment>
-            <pre>{JSON.stringify(merchant, null, 2)}</pre>
-            <pre>{JSON.stringify(products, null, 2)}</pre>
-            <ProductList products={products} />
-        </React.Fragment>
+    <>
       <Head>
           <meta charset="UTF-8"/>
           <title>Hlavní stránka | Truhlice</title>
-          <link rel="preconnect" href="https://fonts.googleapis.com"/>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet"/>
           <meta httpEquiv="content-type" content="text/html; charset=ISO-8859-1"/>
           <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" name="viewport"/>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
@@ -38,28 +33,28 @@ export default function Home({merchant, products}) {
           <div className="header">
               <div className="navbar">
                   <div className="logo">
-                    <img src="/images/matince-ver.png" width="125px" height='auto'/>
+                    <Image alt="" src="/images/matince-ver.png" width={175  } height={100} />
                   </div>
                   <nav>
                       <ul id="MenuItems">
-                          <li><a href="/">Úvod</a></li>
-                          <li><a href="/products">Produkty</a></li>
-                          <li><a href="/about-me.html">O mě</a></li>
-                          <li><a href="/contact.html">Kontakt</a></li>
+                          <li><Link href="/">Úvod</Link></li>
+                          <li><Link href="/products">Produkty</Link></li>
+                          <li><Link href="/about-me.html">O mě</Link></li>
+                          <li><Link href="/contact.html">Kontakt</Link></li>
                       </ul>
                   </nav>
-                  <img src="/images/cart.png" width="30px" height="30px" onClick="document.location.href='cart.html'" className="rocket"/>
-                  <img src="/images/menu.png" className="menu-icon" onClick="menutoggle()"/>
+                  <Image alt="" src="/images/cart.png" width="30px" height="30px" onClick="document.location.href='cart.html'" className="rocket"/>
+                  <Image alt="" src="/images/menu.png" className="menu-icon" onClick="menutoggle()" width={28} height={28} />
               </div>
           <div className="container">
               <div className="row">
                   <div className="col-2">
                       <h1>Ručně šité produkty</h1>
                       <p>Ručně šité tašky, utěrky, zástěry a spoustu dalších produktů<br/>přímo z dílny až k Vám!</p>
-                      <a href="/products" className="btn">Prohlédnout &#10140;</a>
+                      <Link href="/products" className="btn">Prohlédnout &#10140;</Link>
                   </div>
                   <div className="col-2">
-                    <img src="/images/img_20211031_115634done.png" alt='Knihobal'/>
+                    <Image src="/images/img_20211031_115634done.png" alt='Knihobal' width={910} height={910}/>
                   </div>
               </div>
           </div>  
@@ -68,13 +63,13 @@ export default function Home({merchant, products}) {
               <div className="small-container">
                   <div className="row">
                       <div className="col-3">
-                          <img src="/images/img_20211031_120823.jpg"/>
+                          <Image alt="" src="/images/img_20211031_120823.jpg" width={910} height={910}/>
                       </div>
                       <div className="col-3">
-                          <img src="/images/img_20211031_121216.jpg"/>
+                          <Image alt="" src="/images/img_20211031_121216.jpg" width={910} height={910}/>
                       </div>
                       <div className="col-3">
-                          <img src="/images/img_20211031_121504.jpg"/>
+                          <Image alt="" src="/images/img_20211031_121504.jpg" width={910} height={910}/>
                       </div>
                   </div>
               </div>
@@ -83,7 +78,7 @@ export default function Home({merchant, products}) {
           <h2 className="title">Oblíbené produkty</h2>
           <div className="row">
               <div className="col-4">
-                  <img src="/images/img_20211031_115330.jpg"/>
+                  <Image alt="" src="/images/img_20211031_115330.jpg" width={910} height={910}/>
                   <h4>Knihobal</h4>
                   <div className="rating">
                       <i className="fa fa-star"></i>
@@ -95,7 +90,7 @@ export default function Home({merchant, products}) {
                   <p>180 Kč</p>
               </div>
               <div className="col-4">
-                  <img src="/images/img_20211031_122139.jpg"/>
+                  <Image alt="" src="/images/img_20211031_122139.jpg" width={910} height={910}/>
                   <h4>Knihobal</h4>
                   <div className="rating">
                       <i className="fa fa-star"></i>
@@ -107,7 +102,7 @@ export default function Home({merchant, products}) {
                   <p>180 Kč</p>
               </div>
               <div className="col-4">
-                  <img src="/images/img_20211031_122040.jpg"/>
+                  <Image alt="" src="/images/img_20211031_122040.jpg" width={910} height={910}/>
                   <h4>Knihobal</h4>
                   <div className="rating">
                       <i className="fa fa-star"></i>
@@ -124,7 +119,7 @@ export default function Home({merchant, products}) {
               <div className="small-container">
                   <div className="row">
                       <div className="col-2">
-                          <img src="/images/img_20211031_120917.jpg" alt="" /> // Taška
+                          <Image alt="" src="/images/img_20211031_120917.jpg" width="960px" height="100vw"/>
                       </div>
                       <div className="col-2">
                           <p>Nejoblíbenější!</p>
@@ -133,7 +128,7 @@ export default function Home({merchant, products}) {
                               Co kdyby jste místo kupování plastových tašek ze supermarketu měli tašku, která se dá použít znovu a znovu? Pokud by se Vám tohle líbilo, 
                               můžete zvolit tuto tašku!<br/>
                           </small>
-                          <a href="" className="btn">Koupit &#8594;</a>
+                          <Link href="" className="btn">Koupit &#8594;</Link>
                       </div>
                   </div>
               </div>
@@ -151,7 +146,7 @@ export default function Home({merchant, products}) {
                               <i className="fa fa-star"></i>
                               <i className="fa fa-star"></i>
                           </div>
-                          <img src="/images/NvHRPgxe_400x400.png"/>
+                          <Image alt="" src="/images/NvHRPgxe_400x400.png" width={80} height={80}/>
                           <h3>Vojta Hojgr</h3>
                       </div>
                       <div className="col-3">
@@ -165,7 +160,7 @@ export default function Home({merchant, products}) {
                               <i className="fa fa-star"></i>
                               <i className="fa fa-star"></i>
                           </div>
-                          <img src="/images/NvHRPgxe_400x400.png"/>
+                          <Image alt="" src="/images/NvHRPgxe_400x400.png" width={80} height={80} margin-top="20px"  border-radius="50%"/>
                           <h3>Chlebodar</h3>
                       </div>
                       <div className="col-3">
@@ -178,7 +173,7 @@ export default function Home({merchant, products}) {
                               <i className="fa fa-star"></i>
                               <i className="fa fa-star"></i>
                           </div>
-                          <img src="/images/NvHRPgxe_400x400.png"/>
+                          <Image alt="" src="/images/NvHRPgxe_400x400.png" width={80} height={80} />
                           <h3>Moje Pipi ❤️</h3>
                       </div>
                   </div>
@@ -195,9 +190,9 @@ export default function Home({merchant, products}) {
                   <div className="footer-col-2">
                       <h3>Sleduj mě na</h3>
                       <ul>
-                          <a href="https://www.facebook.com/Truhlice" className="facebook" target="_blank">Facebook</a><br/>
-                          <a href="https://www.instagram.com/truhlice/" className="instagram" target="_blank">Instagram</a><br/>
-                          <a href="https://www.instagram.com/vojtahojgr/" className="programmer" target="_blank">Instagram (programátor)</a>  
+                          <Link href="https://www.facebook.com/Truhlice" className="facebook" target="_blank">Facebook</Link><br/>
+                          <Link href="https://www.instagram.com/truhlice/" className="instagram" target="_blank">Instagram</Link><br/>
+                          <Link href="https://www.instagram.com/vojtahojgr/" className="programmer" target="_blank">Instagram (programátor)</Link>  
                       </ul>
                   </div>
               </div>

@@ -1,0 +1,5 @@
+        <React.Fragment>
+            <pre>{JSON.stringify(merchant, null, 2)}</pre>
+            <pre>{JSON.stringify(products, null, 2)}</pre>
+            <ProductList products={products} />
+        </React.Fragment>
