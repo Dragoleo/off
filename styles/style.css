@@ -1,0 +1,601 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+} 
+.navigation-bar{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul Link{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1600px;
+    max-height: 700px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 40%;
+    min-width: 300px;
+    width: auto;
+    overflow: hidden;
+    background-attachment: scroll;
+    display:block;
+    object-fit: scale-down;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 0px 0;
+    min-width: 960px 100vw;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.col-2 select{
+    padding: 5px;
+    border: 1px solid #999;
+}
+.btn{
+    display: inline-block;
+    background: #262626;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: transform 500ms;
+}
+.btn:hover{
+    transform: translateY(-4px);
+    transition: ease-in 0.6s;
+}
+.header{
+    background: radial-gradient(#f2f2f2, #ffe6e6);
+}
+.header .row{
+    margin-top: 70px;
+}
+.categories{
+    margin: 70px 0;
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.275s ease-in;
+    cursor: pointer;
+}
+.col-4 img{
+    width: 100%;
+}
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title:after{
+    content: '';
+    background: #1a8cff;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h4{
+    color: #555;
+    font-weight: normal;
+}
+.col-4 P{
+    font-size: 14px;
+}
+.rating .fa{
+    color: #ffcc00;
+}
+.col-4:hover{
+   transform: translateY(-5px);
+}
+.facebook{
+    cursor: pointer;
+    color: #888;
+}
+.instagram{
+    cursor: pointer;
+    color: #888;
+}
+.programmer{
+    cursor: pointer;
+    color: #888;
+}
+/*------nabídka------*/
+
+.offer{
+    background: radial-gradient(#f2f2f2, #ffe6e6);
+    margin-top: 80px;
+    padding: 80px 0;
+}
+.col-2 .offer-img{
+    padding: 50px;
+}
+small{
+    color: #555;
+}
+.testimonial{
+    padding-top: 100px;
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+    width: 75px;
+    height: 75px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #ff523b;
+}
+.col-3 p{
+    font-size: 14px;
+    margin: 12px 0;
+    color: #777;
+}
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 20px;
+}
+.footer{
+    height: fit-content;
+    clear: both;
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 15px 0 0;
+    border: 20px 20px;
+    bottom: 0;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: none;
+    text-align: center;
+}
+.footer-col-1, .footer-col-2{
+    min-width: 200px;
+    margin-bottom: 20px;
+    flex-basis: 12%;
+    text-align: center;
+}
+.footer li{
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.footer hr{
+    border: none;
+    background-color: #b5b5b5;
+    height: 1px;
+    margin: auto;
+}
+.copyright{
+    text-align: center;
+    background-color: #000;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+/*------ Všechny produkty ------*/
+.row-2{
+    justify-content: space-around;
+    margin: 30px auto 50px;
+}
+.select{
+    border: 1px solid #999;
+    padding: 5px;
+}
+.select:focus{
+    outline: none;
+}
+/*----- Popisek produktu -----*/
+.page-btn span:hover{
+    background: #ff523b;
+    color: #fff;
+}
+.single-product{
+    margin-top: 80px;
+}
+.single-product .col-2 img{
+    padding: 0;
+}
+.single-product .col-2{
+    padding: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 17px;
+    margin-right: 10px;
+    border: 1px solid #555;
+}
+.input:focus{
+    outline: none;
+}
+.single-product .fa{
+    color: #404040;
+    margin-left: 10px;
+}
+.single-product .col-2 p{
+    margin-top: 9px;
+}
+.single-product .slider{
+    position: absolute;
+    top: 430px;
+    left: 0;
+    width: 19.4vw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    margin-left: 508px;
+}
+.single-product .slider a{
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    vertical-align: middle;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 22px;
+    user-select: none;
+}
+/*----- o mě -----*/
+.abme{
+    max-width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+.abme h1{
+    color: #555;
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+.abme h2{
+    color: #777;
+    font-size: 33px;
+    font-weight: 400;
+}
+.maminka{
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+.cool{
+    margin: none;
+}
+.book{
+    width: 100%;
+    min-height: 66vh;
+    max-width: 1600px;
+    max-height: 700px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.kontejner{
+    width: 100%;
+    height: 100%;
+}
+/*------- košík -------*/
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap; 
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #222;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: #555;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid #404040;
+    width: 100%;
+    max-width: 350px;
+}
+.bramburky{
+    height: 70.6vh;
+}
+.rocket{
+    cursor: pointer;
+}
+.contact{
+    height: 70.6vh;
+}
+.kontakt{
+    margin-top: 80px;
+}
+.kontakt h1{
+    margin-top: 75px;
+    font-size: 90px;
+}
+.kontakt h4{
+    font-size: 25px;
+    margin-top: 100px;
+}
+.kontakt p{
+    margin-top: 75px;
+    font-size: 25px;
+}
+/*----- ikona košíku -----*/
+.cart span{
+    color: #fff;
+    user-select: none;
+    position: absolute;
+    background: #333;
+    width: 1.3rem;
+    height: 1.3rem;
+    font-size: .8rem;
+    border-radius: 50%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 1rem;
+    right: .3rem;
+    display: none;
+    transition:ease-in;
+}
+.continue{
+    display: flex;
+    justify-content: flex-end;
+}
+.packeta-selector-open{
+    display: inline-block;
+    background: #262626;
+    color: white;
+    padding: 8px 30px;
+    margin: 10px 40px;
+    border-radius: 30px;
+    transition: transform 500ms;
+    left: 8%;
+}
+.packeta-selector-open:hover{
+    transform: translateY(-4px);
+    transition: ease-in 0.6s;
+}
+/*----- menu zobrazení na mobilu-----*/
+
+@media only screen and (max-width: 800px){
+    .col-2 + .col-3 + .col-4{
+        flex-basis: 100%;
+    }
+    nav ul{
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.35s ease-in-out;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: right;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    .space-fix{
+        margin-bottom: 5px;
+    }
+    .single-product .slider{
+        width: 100vw;
+        top: 342px;
+        margin-left: 0;
+    }
+    .slider a{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .prev-2{
+        float:right;
+        margin-right: 10px;
+    }
+    .prev-1{
+        float: left;
+        margin-left: 10px;
+
+    }
+    .book{
+        padding: 0 5px;
+        min-height: 67.5vh;
+    }
+    .single-product select{
+        margin-left: 7px;
+    }
+    .abme{
+        max-width: 333px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .abme h1{
+        font-size: 40px;
+        margin: 3px 0;
+    }
+    .maminka{
+        width: 188px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    .abme h2{
+        font-size: 21px;
+    }
+    .cart-info p{
+        display: none;
+    }
+    .konec{
+        vertical-align: middle;
+        text-align: middle;
+        margin-top: 5vw;
+    }
+    .kontakt{
+        margin-top: 20px;
+    }
+    .kontakt h1{
+        margin-top: 10px;
+        font-size: 70px;
+    }
+    .kontakt h4{
+        font-size: 22px;
+        margin-top: 66px;
+    }
+    .kontakt p{
+        margin-top: 45px;
+        font-size: 17px;
+    }
+} 
+/*--menu zobrazení pro zařízení méně než velikost 600--*/
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2 + .col-3 + .col-4{
+        flex-basis: 100%;
+    }
+    .single-product .slider{
+        top: 342px;
+    }
+    .slider a{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
